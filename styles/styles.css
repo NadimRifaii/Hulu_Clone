@@ -1,15 +1,21 @@
+/* global variables starts */
 :root {
   --border-radius: 6px;
   --main-background-color: #323843;
+  --main-color: #1ce783
 }
 
+/* global variables ends */
+
 .landing {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
   background-image: url('../assets/background_1.jpg');
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 
+/* header starts */
 .header .container {
   padding: 20px;
   position: relative;
@@ -117,3 +123,58 @@
 
   }
 }
+
+/* header ends */
+/* info box starts */
+.plans-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--main-color);
+  gap: 40px;
+}
+
+.plans-section p.plan-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.plans-section .image-container img {
+  height: 60px;
+}
+
+.plans-section .price {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.plans-section button {
+  display: block;
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+  background-color: var(--main-color);
+  border-radius: var(--border-radius);
+  margin: auto;
+  padding: 10px;
+  font-weight: bold;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.plans-section button:hover {
+  opacity: .5
+}
+
+@media (max-width:992px) {
+  .landing .plans-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* info box ends */
