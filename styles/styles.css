@@ -1,0 +1,119 @@
+:root {
+  --border-radius: 6px;
+  --main-background-color: #323843;
+}
+
+.landing {
+  height: calc(100vh - 120px);
+  background-image: url('../assets/background_1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.header .container {
+  padding: 20px;
+  position: relative;
+}
+
+.header .logo {
+  width: 61px;
+}
+
+.header .menu div a {
+  color: white;
+}
+
+.header .menu div {
+  padding: 10px;
+  transition: .3s;
+  color: white;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.header .menu div.log-in {
+  opacity: .5
+}
+
+.header .menu div.log-in:hover {
+  opacity: 1;
+  background-color: var(--main-background-color);
+}
+
+.header .menu div.get-all-three {
+  display: none;
+  background-color: black;
+}
+
+.header .nav .bars {
+  display: none;
+}
+
+@media (max-width:992px) {
+  .header .nav .bars {
+    display: block;
+    padding: 12px 16px;
+    background-color: var(--main-background-color);
+    border-radius: var(--border-radius);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .header .nav .bars:before {
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-color: transparent;
+    border-style: solid;
+    top: 100%;
+    left: 15px;
+    transition: .2s;
+  }
+
+  .header .nav:hover .bars:before {
+    border-color: var(--main-background-color) transparent transparent transparent;
+
+  }
+
+  .header .nav .bars .holder {
+    height: 20px;
+  }
+
+  .header .nav .bars span {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .header .nav .menu {
+    display: none;
+  }
+
+  .header .nav:hover .menu {
+    display: block;
+    position: absolute;
+    top: 87%;
+    right: 20px;
+    background-color: var(--main-background-color);
+    padding: 5px;
+    text-align: center;
+    width: 256px;
+    border-radius: var(--border-radius);
+  }
+
+  .header .nav .menu div.get-all-three {
+    display: block;
+  }
+
+  .header .menu div.log-in {
+    margin-bottom: 5px;
+  }
+
+  .header .menu div.log-in:hover {
+    opacity: 1;
+    background-color: #ffffff33;
+
+  }
+}
