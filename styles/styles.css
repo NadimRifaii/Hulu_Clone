@@ -515,7 +515,7 @@
 .plans-section p {
   max-width: 600px;
   font-size: 20px;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   line-height: normal;
 }
 
@@ -561,7 +561,7 @@
 .plans-section .base-bundle {
   color: white;
   text-align: center;
-  padding: 10px;
+  gap: 10px;
 }
 
 .plans-section .base-plans h3 {
@@ -589,7 +589,8 @@
   background-color: #424957;
   position: relative;
   border-radius: 16px;
-  cursor: pointer
+  cursor: pointer;
+  margin-top: -20px;
 }
 
 .plans-section .toggler:before {
@@ -615,12 +616,15 @@
     border-width: 0px;
   }
 
+  .plans-section .toggler {
+    margin-top: 0px;
+  }
+
   .plans-section .top-box .base-bundle {
     border-top: 1px solid white;
     width: 100%;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
     position: relative;
   }
 
