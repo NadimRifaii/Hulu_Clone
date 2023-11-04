@@ -2,6 +2,8 @@
 :root {
   --border-radius: 6px;
   --main-background-color: #323843;
+  --section-background-color: #0b0c0f;
+  ;
   --main-color: #1ce783;
   --main-transition: .5s
 }
@@ -22,7 +24,8 @@
   position: relative;
 }
 
-.header .logo {
+.header .logo img {
+  height: 61px;
   width: 61px;
 }
 
@@ -134,10 +137,6 @@
   flex-direction: column;
 }
 
-.bundles-section .bundles-container>div {
-  margin-bottom: 25px;
-}
-
 .bundles-container .plan-title {
   font-size: 12px;
   font-weight: bold;
@@ -212,9 +211,9 @@
 
 /* series collection starts */
 .series-collection-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #0b0c0f;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--section-background-color);
 }
 
 
@@ -223,7 +222,8 @@
   text-align: center;
 }
 
-.series-collection-section h1 {
+.series-collection-section h1,
+.plans-section h1 {
   color: white;
   margin: 20px auto;
   font-size: 48px;
@@ -346,9 +346,11 @@
 }
 
 @media (max-width:992px) {
-  .series-collection-section h1 {
+
+  .series-collection-section,
+  p {
     color: white;
-    margin: 20px auto;
+    margin: auto;
     font-size: 32px;
   }
 
@@ -358,3 +360,342 @@
 }
 
 /* series collection ends */
+/* live sports section starts */
+.live-sports {
+  height: 100vh;
+  background-image: url('../assets/live-sports.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.live-sports::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0000009e;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:776px) {
+  .live-sports {
+    background-position: unset
+  }
+}
+
+.live-sports .container {
+  height: 100%;
+  z-index: 5;
+  position: relative;
+}
+
+.live-sports .links-container .link {
+  padding: 15px 0;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+  margin: 0 25px 0 0;
+  cursor: pointer;
+  transition: .3s
+}
+
+.live-sports .links-container .link:hover {
+  color: #ffffff9c;
+}
+
+.live-sports .links-container .link:not(.active) {
+  opacity: .5
+}
+
+.live-sports .links-container .active::before {
+  content: '';
+  position: absolute;
+  width: calc(100%);
+  height: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+}
+
+.live-sports .box {
+  max-width: 500px;
+}
+
+.live-sports .box .info {
+  margin: 45px auto 0px;
+  color: white;
+}
+
+.live-sports .box h1.title {
+  font-size: 42px;
+}
+
+.live-sports .box .info p:not(:last-child) {
+  line-height: normal;
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.live-sports .icons {
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.live-sports .icon-holder {
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.live-sports .box .info p:last-child {
+  font-size: 11px;
+  line-height: normal;
+  margin: 20px auto;
+  color: hsla(0, 0%, 100%, .6);
+}
+
+.live-sports .box .info p:last-child a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width:767px) {
+  .live-sports .links-container .link {
+    font-size: 12px;
+    margin-right: 0;
+  }
+
+  .live-sports .container {
+    justify-content: center;
+  }
+
+  .live-sports .box {
+    text-align: center;
+  }
+
+  .live-sports .box h1.title {
+    font-size: 32px;
+  }
+
+  .live-sports .box .info p {
+    font-size: 18px;
+  }
+
+  .live-sports .icons {
+    justify-content: center;
+  }
+}
+
+/* live sports section ends */
+
+/* plans section starts */
+.plans-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--section-background-color)
+}
+
+.plans-section h1,
+.plans-section p {
+  text-align: center;
+  color: white
+}
+
+.plans-section p {
+  max-width: 600px;
+  font-size: 20px;
+  margin: 0 auto 20px;
+  line-height: normal;
+}
+
+.plans-section .top-box {
+  padding: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid white;
+  top: 0;
+  background-color: var(--section-background-color);
+}
+
+.plans-section .top-box>div h5 {
+  color: black;
+  padding: 10px 0px;
+  width: fit-content;
+  margin: 20px auto;
+  height: 35px
+}
+
+.plans-section .top-box>div h5.most-popular {
+  background-color: var(--main-color);
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.plans-section .top-box>div .price {
+  background-color: white;
+  padding: 15px 20px;
+  text-align: center;
+  max-width: 247px;
+  margin: auto;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.plans-section .top-box>div .price:hover {
+  background-color: #ffffff8c
+}
+
+.plans-section .base-bundle {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.plans-section .base-plans h3 {
+  font-size: 11px;
+}
+
+.plans-section .base-plans .image-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plans-section .base-plans .image-container img {
+  height: 15px;
+}
+
+.plans-section .base-bundle img {
+  width: 161px;
+}
+
+.plans-section .toggler {
+  min-width: 55px;
+  height: 30px;
+  background-color: #424957;
+  position: relative;
+  border-radius: 16px;
+  cursor: pointer
+}
+
+.plans-section .toggler:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+
+}
+
+@media (min-width:992px) {
+  .plans-section .top-box>div {
+    flex-basis: calc(100% / 3)
+  }
+}
+
+@media (max-width:992px) {
+  .plans-section .top-box {
+    border-width: 0px;
+  }
+
+  .plans-section .top-box .base-bundle {
+    border-top: 1px solid white;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+
+  .plans-section .top-box>div {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid white;
+    border-left-color: transparent;
+    border-right: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .plans-section .top-box>div:last-child {
+    border-left-color: white;
+  }
+
+  .plans-section .top-box>div .price {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:767px) {
+
+  .series-collection-section h1,
+  .plans-section h1,
+  .plans-section .container h1 {
+    font-size: 32px;
+  }
+
+  .plans-section .top-box>div .price {
+    font-size: 11px;
+  }
+}
+
+.plans-container .plan {
+  color: white;
+  padding: 25px 0;
+  border-bottom: 1px solid white;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.plans-container>div:nth-of-type(2) {
+  border-top: 1px solid white;
+}
+
+.plans-container .txt p {
+  text-align: left;
+  font-size: 11px;
+  max-width: 350px;
+  margin: 0
+}
+
+.plans-container .plan>div {
+  width: calc(100% / 3);
+  font-size: 15px;
+}
+
+.plans-container .plan>div:first-child {
+  text-align: left;
+}
+
+.plans-container .show img {
+  cursor: pointer;
+}
+
+@media (max-width:992px) {
+  .plans-container .plan>div.left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .plans-container .plan>div.center {
+    border-right: 1px solid white
+  }
+
+  .plans-container .plan>div.center,
+  .plans-container .plan>div.right {
+    width: 50%;
+  }
+}
+
+/* plans section ends */
