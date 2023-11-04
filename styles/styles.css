@@ -345,6 +345,11 @@
   font-size: 12px;
 }
 
+.series-collection-footer p a {
+  font-size: 12px;
+  color: hsla(0, 0%, 100%, .6);
+}
+
 .series-collection-footer a {
   color: #fff;
   text-decoration: underline;
@@ -567,6 +572,14 @@
 .plans-section h3 {
   font-size: 15px;
   font-weight: 500;
+}
+
+.plans-section .num-days {
+  max-width: 300px;
+  font-size: 15px;
+  margin: 0 auto;
+  line-height: normal;
+  color: #bec0c2
 }
 
 .plans-section .base-plans .image-container {
