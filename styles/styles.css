@@ -537,7 +537,7 @@
 
 .plans-section .top-box>div h5.most-popular {
   background-color: var(--main-color);
-  border-radius: 12px;
+  border-radius: 100px;
   padding: 5px 10px;
   font-size: 12px;
 }
