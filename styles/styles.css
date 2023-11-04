@@ -381,7 +381,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #0000009e;
+  background-color: #0000003b;
   width: 100%;
   height: 100%;
 }
@@ -564,8 +564,9 @@
   gap: 10px;
 }
 
-.plans-section .base-plans h3 {
-  font-size: 11px;
+.plans-section h3 {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .plans-section .base-plans .image-container {
@@ -628,7 +629,7 @@
     position: relative;
   }
 
-  .plans-section .top-box>div {
+  .bundle-save .plans-section .top-box>div {
     width: 50%;
     padding: 20px;
     border: 1px solid white;
