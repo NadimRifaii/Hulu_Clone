@@ -651,6 +651,11 @@
     padding: 20px;
   }
 
+  .top-box .with-ads p:not(.num-days),
+  .top-box .no-ads p:not(.num-days) {
+    font-size: 17px;
+  }
+
   .top-box .with-ads {
     border-right: 1px solid white;
   }
@@ -674,7 +679,7 @@
   }
 
   .plans-section .top-box>div .price {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
