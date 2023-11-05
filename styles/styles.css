@@ -678,6 +678,10 @@
     font-size: 32px;
   }
 
+  .plans-section .num-days {
+    font-size: 12px;
+  }
+
   .plans-section .top-box>div .price {
     font-size: 10px;
   }
