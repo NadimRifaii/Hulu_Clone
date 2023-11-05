@@ -621,7 +621,7 @@
 
 @media (min-width:992px) {
   .plans-section .top-box>div {
-    flex-basis: calc(100% / 3)
+    flex-basis: calc(100% / 3);
   }
 }
 
@@ -636,19 +636,23 @@
 
   .plans-section .top-box .base-bundle {
     border-top: 1px solid white;
+    border-bottom: 1px solid white;
     width: 100%;
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    padding-top: 10px;
+
   }
 
-  .bundle-save .plans-section .top-box>div {
+  .top-box .with-ads,
+  .top-box .no-ads {
     width: 50%;
     padding: 20px;
-    border: 1px solid white;
-    border-left-color: transparent;
-    border-right: transparent;
-    border-bottom-color: transparent;
+  }
+
+  .top-box .with-ads {
+    border-right: 1px solid white;
   }
 
   .plans-section .top-box>div:last-child {
